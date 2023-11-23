@@ -1,4 +1,4 @@
-<script>
+
     const quizContainer = document.getElementById('quiz-container');
     const questionElement = document.querySelector('.question');
     const choicesElement = document.querySelector('.choices');
@@ -117,4 +117,4 @@
     });
 
     startQuiz();  // Initial quiz start
-</script>
+
