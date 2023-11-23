@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="Project3.js">
-        <link rel="stylesheet" href="holy.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.js"></script>
-    </head>
-     <body>
-        <form id="woo">
-            <input id="task" type="text" placeholder="Input Task" autocomplete="off"/>
-            <input id="submit" type="submit">
-            <select  id="quiztype">
-                <option value="HTML">HTML</option>
-                <option value="JavaScript">JavaScript</option>
-            </select>
-        </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+</head>
+<body>
 
-    <div class="container">
-
+<div id="quiz-container">
+    <div id="quiz" class="hidden">
+        <div class="question"></div>
+        <div class="choices"></div>
+        <p class="result"></p>
     </div>
-    <script id="quiz-template" type="text/x-handlebars-template">
-        {{#each questions}}
-          <div class="question-container" data-question-index="{{@index}}">
-            <div class="question">
-              <p>{{question}}</p>
-              <div class="choices">
-                {{#each choices}}
-                  <button class="choice-btn" data-answer="{{id}}">{{text}}</button>
-                {{/each}}
-              </div>
-            </div>
-          </div>
-        {{/each}}
+    <button id="restart-btn" class="hidden">Restart Quiz</button>
+</div>
     </body>
 </html>
